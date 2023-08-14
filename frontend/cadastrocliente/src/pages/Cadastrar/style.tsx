@@ -11,14 +11,20 @@ export default StyleSheet.create({
     borderRadius: 5,
     marginBottom: 10,
   },
+  label: {
+    color: 'black',
+    fontWeight: 'bold',
+    fontSize: 17,
+  },
   button: {
-    backgroundColor: '#ABABAB',
+    backgroundColor: '#D6DBEE',
     padding: 7,
     borderRadius: 5,
     alignItems: 'center',
   },
   buttonText: {
-    color: '#FFFFFF',
+    color: '#4209FF',
     fontSize: 16,
+    fontWeight: 'bold',
   },
 });

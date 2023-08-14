@@ -13,15 +13,13 @@ export const Home = ({navigation}: {navigation: any}) => {
     <SafeAreaView style={styles.container}>
       <ScrollView>
         <View style={styles.content}>
-          <Text style={styles.title}>CLIENTE</Text>
-          <View>
-            <TouchableOpacity onPress={() => navigation.navigate('Lista')}>
-              <Text>Lista todos clientes</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('Cadastrar')}>
-              <Text>Cadastrar</Text>
-            </TouchableOpacity>
-          </View>
+          <Text style={styles.title}>CLIENTES</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('Cadastrar')}>
+            <Text style={styles.text}>Cadastrar cliente</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Lista')}>
+            <Text style={styles.text}>Listar todos clientes</Text>
+          </TouchableOpacity>
         </View>
         <View style={styles.content}>
           <Text>Conteudo</Text>

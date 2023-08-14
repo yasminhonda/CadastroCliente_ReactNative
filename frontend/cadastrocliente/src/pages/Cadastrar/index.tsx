@@ -35,10 +35,11 @@ const Cadastro = ({navigation}: {navigation: any}) => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Text style={styles.label}>Nome do cliente:</Text>
       <TextInput
         style={styles.input}
         clearButtonMode="always"
-        placeholder="Nome cliente"
+        placeholder="Digite aqui..."
         value={nome}
         onChangeText={nomeChange}
       />

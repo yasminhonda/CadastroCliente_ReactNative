@@ -1,12 +1,5 @@
 import React, {useState} from 'react';
-import {
-  Alert,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-} from 'react-native';
+import {SafeAreaView, Text, TextInput, TouchableOpacity} from 'react-native';
 
 import styles from './style';
 
@@ -43,6 +36,7 @@ export const EditarClientes = ({
 
   return (
     <SafeAreaView style={styles.container}>
+      <Text style={styles.label}>Nome do cliente:</Text>
       <TextInput
         style={styles.input}
         clearButtonMode="always"

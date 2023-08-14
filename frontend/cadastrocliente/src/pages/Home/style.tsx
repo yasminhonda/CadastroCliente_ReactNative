@@ -4,22 +4,26 @@ const statusBarHeight: number | undefined = StatusBar.currentHeight;
 
 export default StyleSheet.create({
   container: {
-    backgroundColor: '#040316',
     paddingTop: Platform.OS === 'android' ? statusBarHeight : 25,
+    marginLeft: 10,
   },
   content: {
-    alignSelf: 'center',
     flex: 1,
     width: '98%',
     height: 120,
     marginBottom: 20,
-    backgroundColor: '#f1f1f1',
-    alignItems: 'center',
-    justifyContent: 'space-around',
+    alignItems: 'flex-start',
     color: 'black',
+    backgroundColor: '#D6DBEE',
+    padding: 15,
+  },
+  text: {
+    fontSize: 15,
   },
   title: {
     fontWeight: 'bold',
-    color: 'black',
+    color: '#1800F3',
+    fontSize: 20,
+    marginBottom: 5,
   },
 });

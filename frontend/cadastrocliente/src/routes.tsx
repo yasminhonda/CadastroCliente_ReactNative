@@ -15,13 +15,61 @@ function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Cadastrar" component={Cadastrar} />
-        <Stack.Screen name="Lista" component={ListaClientes} />
-        <Stack.Screen name="Editar" component={EditarClientes} />
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{
+            title: 'My home',
+            headerStyle: {
+              backgroundColor: '#4209FF',
+            },
+            headerTintColor: '#FFFF00',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
+        <Stack.Screen
+          name="Cadastrar"
+          component={Cadastrar}
+          options={{
+            headerStyle: {
+              backgroundColor: '#4209FF',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
+        <Stack.Screen
+          name="Lista"
+          component={ListaClientes}
+          options={{
+            headerStyle: {
+              backgroundColor: '#4209FF',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
+        <Stack.Screen
+          name="Editar"
+          component={EditarClientes}
+          options={{
+            headerStyle: {
+              backgroundColor: '#4209FF',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-
 export default Routes;

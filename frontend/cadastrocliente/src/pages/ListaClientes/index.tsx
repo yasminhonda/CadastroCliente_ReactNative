@@ -54,11 +54,11 @@ export const ListaClientes = ({navigation}: {navigation: any}) => {
   };
   return (
     <SafeAreaView style={styles.container}>
-      <Table borderStyle={{borderWidth: 2, borderColor: '#ABABAB'}}>
+      <Table borderStyle={{borderWidth: 2, borderColor: '#D6DBEE'}}>
         <Row
           data={table.tableHead}
           style={styles.head}
-          textStyle={styles.text}
+          textStyle={styles.textHead}
         />
         <Rows
           data={table.tableData}
