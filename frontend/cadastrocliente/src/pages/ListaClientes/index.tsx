@@ -1,6 +1,8 @@
 import {useEffect, useState} from 'react';
-import {SafeAreaView, StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {SafeAreaView, Text, TouchableOpacity} from 'react-native';
 import {Table, Row, Rows} from 'react-native-table-component';
+
+import styles from './style';
 
 export const ListaClientes = ({navigation}: {navigation: any}) => {
   const url = 'http://192.168.1.101:8080/cliente';
@@ -26,22 +28,6 @@ export const ListaClientes = ({navigation}: {navigation: any}) => {
       },
     });
   };
-
-  // const putClient = async (id: number, nome: string) => {
-  //   console.log(id);
-  //   console.log(nome);
-  //   fetch(url, {
-  //     method: 'PUT',
-  //     headers: {
-  //       Accept: 'application/json',
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify({
-  //       id: id,
-  //       nome: nome,
-  //     }),
-  //   });
-  // };
 
   useEffect(() => {
     getClientes();
@@ -88,30 +74,3 @@ export const ListaClientes = ({navigation}: {navigation: any}) => {
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-    paddingTop: 30,
-    backgroundColor: '#E8E8E8',
-    justifyContent: 'space-between',
-  },
-  head: {height: 40, backgroundColor: '#CFD4DA'},
-  content: {backgroundColor: '#f1f8ff'},
-  text: {margin: 6, color: '#000000'},
-  button: {
-    backgroundColor: '#ABABAB',
-    padding: 7,
-    borderRadius: 5,
-    width: '20%',
-    alignItems: 'center',
-    marginTop: 10,
-  },
-  buttonText: {
-    color: '#FFFFFF',
-    fontSize: 16,
-  },
-});
-
-//https://www.youtube.com/watch?v=0AM6AXlFwxM&t=4223s

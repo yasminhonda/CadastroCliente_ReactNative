@@ -1,18 +1,12 @@
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
 import {
-  Platform,
   SafeAreaView,
   ScrollView,
-  StatusBar,
-  StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from 'react-native';
-
-const statusBarHeight: number | undefined = StatusBar.currentHeight;
+import styles from './style';
 
 export const Home = ({navigation}: {navigation: any}) => {
   return (
@@ -63,27 +57,5 @@ export const Home = ({navigation}: {navigation: any}) => {
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#040316',
-    paddingTop: Platform.OS === 'android' ? statusBarHeight : 25,
-  },
-  content: {
-    alignSelf: 'center',
-    flex: 1,
-    width: '98%',
-    height: 120,
-    marginBottom: 20,
-    backgroundColor: '#f1f1f1',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    color: 'black',
-  },
-  title: {
-    fontWeight: 'bold',
-    color: 'black',
-  },
-});
 
 export default Home;

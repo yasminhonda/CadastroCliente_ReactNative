@@ -1,24 +1,25 @@
 //https://reactnavigation.org/docs/bottom-tab-navigator
 
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Home from './pages/Home/Home';
-import Cadastro from './pages/Cadastrar';
-import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
+
 import {ListaClientes} from './pages/ListaClientes';
+import {EditarClientes} from './pages/EditarClientes';
+import Home from './pages/Home';
+import Cadastrar from './pages/Cadastrar';
 
 const Stack = createNativeStackNavigator();
-const Tab = createBottomTabNavigator();
 
 function Routes() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Cadastro" component={Cadastro} />
-        <Tab.Screen name="Lista" component={ListaClientes} />
-      </Tab.Navigator>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Cadastrar" component={Cadastrar} />
+        <Stack.Screen name="Lista" component={ListaClientes} />
+        <Stack.Screen name="Editar" component={EditarClientes} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
